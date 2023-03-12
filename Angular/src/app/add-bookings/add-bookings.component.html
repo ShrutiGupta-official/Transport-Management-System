@@ -1,0 +1,71 @@
+<div class="col-md-6 offset-md-3">
+    <div *ngIf="addMessage" class="alert alert-success alert-dismissible fade show">
+        <strong>Added the field !</strong> 
+        <button style="float: right;" type="button" (click)="back()" class="btn btn-success" >Back</button>
+    </div>
+    <h2>Add Bookings</h2>
+    <form (ngSubmit)="addBooking()">
+       <!--<div class="form-group">
+            <label> Id </label>
+            <input type="text" class="form-control" id="id" required [(ngModel)]="addtobooklist.id" name="id">
+        </div>-->
+        <div class="form-group">
+            <label> Vehicle Name </label>
+            <input type="text" id="vehicle" name="vehicle" class="form-control" required [(ngModel)]="addtobooklist.vehicle">
+        </div>
+        <div class="form-group">
+            <label> Driver Name </label>
+            <input type="text" id="vehicle" name="driver" class="form-control" required [(ngModel)]="addtobooklist.driver">
+        </div>
+        <div class="form-group">
+            <label> From Location </label>
+            <input type="text" class="form-control" id="fromLocation" [(ngModel)]="addtobooklist.fromLocation" name ="fromLocation">
+        </div>
+        <div class="form-group">
+            <label> To Location </label>
+            <input type="text" class="form-control" id="toLocation" [(ngModel)]="addtobooklist.toLocation" name ="toLocation">
+        </div>
+        <!--<div class="form-group">
+            <label> Distance</label>
+            <input type="text" class="form-control" id="distance" [(ngModel)]="addtobooklist.distance" name ="distance">
+        </div>
+        <div class="form-group">
+            <label> Type </label>
+            <input type="text" class="form-control" id="vehicle" required [(ngModel)]="addtobooklist.type" name ="type">
+        </div>
+        <div class="form-group">
+            <label> Tripfare </label>
+            <input type="text" class="form-control" id="tripfare" [(ngModel)]="addtobooklist.tripfare" name ="tripfare">
+        </div>
+        <div class="form-group">
+            <label> Fuel </label>
+            <input type="text" class="form-control" id="fuel" [(ngModel)]="addtobooklist.fuel" name ="fuel">
+        </div>
+        <div class="form-group">
+            <label> DriverShare </label>
+            <input type="text" class="form-control" id="dShare" [(ngModel)]="addtobooklist.driverShare" name ="driverShare">
+        </div>
+        <div class="form-group">
+            <label> Remarks </label>
+            <input type="text" class="form-control" id="remarks" [(ngModel)]="addtobooklist.remarks" name ="remarks">
+        </div>-->
+        <div class="form-group">
+            <label> StartDate(yyyy-mm-dd) </label>
+            <input type="text" class="form-control" id="startDate" required [(ngModel)]="addtobooklist.startDate" name ="startDate">
+        </div>
+        <div class="form-group">
+            <label> EndDate(yyyy-mm-dd) </label>
+            <input type="text" class="form-control" id="endDate" required [(ngModel)]="addtobooklist.endDate" name ="endDate">
+        </div>
+        <!-- <div class="form-group">
+            <label> trip name </label>
+            <input type="text" class="form-control" id="name" [(ngModel)] = "booking.name" name ="name">
+        </div> -->
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            <button class="btn btn-success" type="submit">Submit</button>
+            <a href="/home"><button style="float: right;" class="btn btn-success " type="submit">Home</button></a>
+        </div>
+        
+        
+    </form>
+</div>

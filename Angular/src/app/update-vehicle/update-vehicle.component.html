@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+    <div *ngIf="updateMessage" class="alert alert-success alert-dismissible fade show">
+        <strong>Updated successfully !</strong> 
+        <button style="float: right;" type="button" (click)="back()" class="btn btn-success" >Back</button>
+    </div>
+    <h2>Update Vehicles</h2>
+    <form (ngSubmit)="updateVehicle()" >
+       <div class="form-group">
+            <label> Registration Number </label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="vehicles.registrationNo" name="registrationNo">
+        </div>
+        <div class="form-group">
+            <label>Model Name</label>
+            <input type="text" id="vehicle" name="name" class="form-control" required [(ngModel)]="vehicles.modelType"  name="modelType">
+        </div>
+        <div class="form-group">
+            <label> Vehicle Type </label>
+            <input type="text" class="form-control" id="driver" [(ngModel)]="vehicles.vehicleType" name ="vehicleType">
+        </div>
+        <div class="form-group">
+            <label> Number Of Seats</label>
+            <input type="number" class="form-control" id="fromLocation" [(ngModel)]="vehicles.numberOfSeat" name ="numberOfSeat">
+        </div>
+        
+        <!--<div class="form-group">
+            <label> AC Available</label>
+            <input type="text" class="form-control" id="fromLocation" [(ngModel)]="vehicles.acAvailable" name ="acAvailable">
+        </div>-->
+        
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>
+

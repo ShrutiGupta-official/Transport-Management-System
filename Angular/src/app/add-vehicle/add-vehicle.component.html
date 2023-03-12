@@ -1,0 +1,41 @@
+<div class="col-md-6 offset-md-3">
+    <div *ngIf="addMessage" class="alert alert-success alert-dismissible fade show">
+        <strong>Added the field !</strong> 
+        <button style="float: right;" type="button" (click)="back()" class="btn btn-success" >Back</button>
+    </div>
+    <h2>Add Vehicles</h2>
+    <form #addvehicleform="ngForm" (ngSubmit)="addVehicle()">
+       <div class="form-group">
+            <label> Registration Number </label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="addtovehiclelist.registrationNo" name="registrationNo" required>
+        </div>
+        <div class="form-group">
+            <label>Model Name</label>
+            <input type="text" id="vehicle" name="name" class="form-control" required [(ngModel)]="addtovehiclelist.modelType"  name="modelType">
+            </div>
+        <div class="form-group">
+            <label> Vehicle Type </label>
+            <input type="text" class="form-control" id="driver" [(ngModel)] = "addtovehiclelist.vehicleType" name ="vehicleType" required>
+        </div>
+        <div class="form-group">
+            <label> Number Of Seats</label>
+            <input type="number" class="form-control" id="fromLocation" [(ngModel)] = "addtovehiclelist.numberOfSeat" name ="numberOfSeat">
+        </div>
+        
+        <!--<div class="form-group">
+            <label> AC Available</label>
+            <input type="text" class="form-control" id="fromLocation" [(ngModel)] = "addtovehiclelist.acAvailable" name ="acAvailable">
+        </div>-->
+
+        <!-- <div class="form-group">
+            <label> trip name </label>
+            <input type="text" class="form-control" id="name" [(ngModel)] = "booking.name" name ="name">
+        </div> -->
+    <div style="margin-top: 10px; margin-bottom: 10px;">
+        <button class="btn btn-success" type="submit">Submit</button>
+        <a href="/home"><button style="float: right;" class="btn btn-success " type="submit">Home</button></a>
+    </div>
+
+    </form>
+</div>
+

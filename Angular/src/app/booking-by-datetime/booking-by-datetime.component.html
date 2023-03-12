@@ -1,0 +1,88 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+	<h1 class="text-center mt pt-3">Booking List By DATE</h1>
+	<div class="bootstrap-wrapper">
+		<div class="container mt text-center">
+			<form (submit)="searchByDate()">
+				<!--<div class="pt-5">
+				<input type="text" placeholder="Enter Booking Date" name="search" [(ngModel)]="getbookingbydatetime"> &nbsp;
+			</div>-->
+				<div style="margin: 20px 0 20 px;">
+					<i style="font-size: 24px; margin: 0 0 5px 0;" class="fa">&#xf073;
+					</i> <span style="padding: 5px;">Start Date</span> <input type="date" name="search" required="true"
+						[(ngModel)]="start">
+				</div>
+				<div style="margin: 20px 0 20px;">
+					<i style="font-size: 24px; margin: 0 0 5px 0;" class="fa">&#xf073;
+					</i> <span style="padding: 5px;">End Date</span> <input type="date" name="search" required="true"
+						[(ngModel)]="end">
+				</div>
+				<br>
+				<button class="btn btn-success" type="submit">Search</button>
+			</form>
+
+			<!--<div class="row">
+
+    <thead>
+        <tr>-->
+			<div class="p-5" *ngIf="!hideDiv">
+				<table class="table table-striped table-bordered bg-light rounded ">
+					<thead>
+						<tr class="text-center bg-secondary text-white" style="font-size: 1.3em;">
+							<!--<th>Id</th>-->
+							<th>Vehicle</th>
+							<th>Driver Name</th>
+							<th>FromLocation</th>
+							<th>ToLocation</th>
+							<!--<th>Distance</th>
+							<th>Type</th>
+							<th>Trip Fare</th>
+							<th>Fuel</th>
+							<th>DriverShare</th>
+							<th>Remarks</th>-->
+							<th>StartDate</th>
+							<th>EndDate</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let bookingdate of bookingbydate">
+
+							<!--<td>{{bookingdate.id}}</td>-->
+							<td>{{bookingdate.vehicle}}</td>
+							<td>{{bookingdate.driver}}</td>
+							<td>{{bookingdate.fromLocation}}</td>
+							<td>{{bookingdate.toLocation}}</td>
+							<!--<td>{{bookingdate.distance}}</td>
+							<td>{{bookingdate.type}}</td>
+							<td>{{bookingdate.tripfare}}</td>
+							<td>{{bookingdate.fuel}}</td>
+							<td>{{bookingdate.driverShare}}</td>
+							<td>{{bookingdate.remarks}}</td>-->
+							<td>{{bookingdate.startDate | date: "dd.MM.yyyy"}}</td>
+							<td>{{bookingdate.endDate | date: "dd.MM.yyyy"}}</td>
+							<!--</tr>-->
+
+					</tbody>
+				</table>
+			</div>
+			<div *ngIf="!noDataDisplay">
+				<h3 class="text-center text-red">No bookings Found!</h3>
+			</div>
+			
+		</div>
+	</div>
+
+	<div style="margin:10px 0 10px 0;" class="d-grid gap-2 d-md-flex justify-content-md-center">
+		<a routerLink="/home" class="text-primary " style="text-decoration: none;"><button
+				class="btn btn-info">Home</button></a>
+	</div>
+</body>
+
+</html>

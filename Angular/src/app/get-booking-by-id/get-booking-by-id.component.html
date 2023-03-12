@@ -1,0 +1,78 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+
+	<h1 class="text-center mt pt-3">Booking List By ID</h1>
+	<div class="bootstrap-wrapper">
+		<div class="container mt text-center">
+			<form (submit)="searchById()">
+				<div class="pt-5">
+					<input type="text" placeholder="Enter Booking Id" name="search" [(ngModel)]="getbookingbyid"> &nbsp;
+				</div>
+				<br>
+
+				<button class="btn btn-success" type="submit">Search</button>
+			</form>
+			<!--<a  mat-raised-button color="primary" class="mb mt" routerLink='/dashboard'>Main Menu</a> &nbsp;-->
+			<!--<div class="row">
+<table id="customers">  
+    <thead>
+        <tr>-->
+			<div class="p-5" *ngIf="!hideDiv">
+				<table class="table table-striped table-bordered bg-light rounded ">
+					<thead>
+						<tr class="text-center bg-secondary text-white" style="font-size: 1.3em;">
+							<th>Id</th>
+							<th>Vehicle</th>
+							<th>Driver Name</th>
+							<th>FromLocation</th>
+							<th>ToLocation</th>
+							<th>Distance</th>
+							<th>Type</th>
+							<th>Trip Fare</th>
+							<th>Fuel</th>
+							<th>DriverShare</th>
+							<th>Remarks</th>
+							<th>StartDate</th>
+							<th>EndDate</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr >
+						<td>{{bookingidlist.id}}</td>
+						<td>{{bookingidlist.vehicle}}</td>
+						<td>{{bookingidlist.driver}}</td>
+						<td>{{bookingidlist.fromLocation}}</td>
+						<td>{{bookingidlist.toLocation}}</td>
+						<td>{{bookingidlist.distance}}</td>
+						<td>{{bookingidlist.type}}</td>
+						<td>{{bookingidlist.tripfare}}</td>
+						<td>{{bookingidlist.fuel}}</td>
+						<td>{{bookingidlist.driverShare}}</td>
+						<td>{{bookingidlist.remarks}}</td>
+						<td>{{bookingidlist.startDate | date: "dd.MM.yyyy"}}</td>
+						<td>{{bookingidlist.endDate | date: "dd.MM.yyyy"}}</td>
+					</tr>
+
+					</tbody>
+				</table>
+
+			</div>
+			<div *ngIf="!noDataDisplay">
+				<h3 class="text-center red">No bookings found!</h3>
+			</div>
+
+		</div>
+	</div>
+	<!--</div>-->
+	<div style="margin: 10px 0 10px 0;" class="d-grid gap-2 d-md-flex justify-content-md-center">
+		<a routerLink="/home" class="text-primary " style="text-decoration: none;"><button
+				class="btn btn-info">Home</button></a>
+	</div>
+</body>
+
+</html>

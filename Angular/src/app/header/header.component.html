@@ -1,0 +1,113 @@
+<style>
+  h2 {
+    color: green;
+    text-align: center;
+  }
+
+  body {
+    background-color: powderblue;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: #bec2c3;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .nav-item{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+  .nav-item .dropdown-menu {
+    background-color: Black;
+  }
+</style>
+<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Vehicle
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="/vehiclelist">Vehicle List</a></li>
+              <li><a class="dropdown-item" routerLink="/getvehiclelistbyregno">Get Vehicles By Registration Number</a></li>
+              <li><a class="dropdown-item" routerLink="/getvehiclebytype">Get Vehicles By Type</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" routerLink="/addvehicle">Add Vehicles</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Driver
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="/driverlist">Driver List</a></li>
+              <!--<li><a class="dropdown-item" routerLink="/getdriverbyvehicletype">Get Driver By Type</a></li>-->
+              
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" routerLink="/adddriver">Add Driver</a></li>
+              <li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Bookings
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="/booking">Bookings List</a></li>
+              <!--<li><a class="dropdown-item" routerLink="/getbookingbyid">Get Booking By ID</a></li>-->
+              <li><a class="dropdown-item" routerLink="/getbookingbydatetime">Get Booking By Date and Time</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" routerLink="/addbookings">Add Bookings</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>

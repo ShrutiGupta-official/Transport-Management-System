@@ -1,0 +1,51 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h1 class="text-center mt pt-3">Vehicle By Registration no.</h1>
+		<div class="bootstrap-wrapper">
+			<div class="container mt text-center">
+				<form (submit)="selectByRegNo()">
+					<div class="pt-5">
+						<input type="text" placeholder="Enter Reg. No." name="search" [(ngModel)]="getvehiclebyno"> &nbsp;
+					</div>
+					<br>
+					<button class="btn btn-success" type="submit">Search</button>
+				</form>
+				
+				<div class="p-5" *ngIf="!hideDiv">
+					<table class="table table-striped table-bordered bg-light rounded">
+						<thead>
+							<tr class="text-center bg-secondary text-white" style="font-size: 1.3em;">
+				
+								<th>Registration Number</th>
+								<th>Model Type</th>
+								<th>Vehicle Type</th>
+								<th>Number Of Seats</th>
+								<!--<th>Ac Available</th>-->
+							</tr>
+						</thead>
+						<tbody>
+								<tr >
+									<td>{{vehiclebyno.registrationNo}}</td>
+									<td>{{vehiclebyno.modelType}}</td>
+									<td>{{vehiclebyno.vehicleType}}</td>
+									<td>{{vehiclebyno.numberOfSeat}}</td>
+									<!--<td>{{vehiclebyno.acAvailable}}</td>-->
+								</tr>
+						</tbody>
+
+					</table>
+					
+				</div>
+				<div *ngIf="!noDataDisplay"><h3 class="text-center red">No vehicles found!</h3></div>
+			</div >
+		</div>
+		<!--</div>-->
+		<div style="margin:10px 0 10px 0;" class="d-grid gap-2 d-md-flex justify-content-md-center">
+			<a routerLink="/home" class="text-primary " style="text-decoration: none;"><button
+					class="btn btn-info">Home</button></a>
+		</div>
+	</body>
+
+</html>

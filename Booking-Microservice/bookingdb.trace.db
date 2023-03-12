@@ -1,0 +1,18 @@
+2022-08-01 23:34:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKINGDB" already exists; SQL statement:
+create table bookingdb(id int AUTO_INCREMENT,distance int,driver varchar(255),d_Share int,from_location varchar(255),fuel int,to_location varchar(255),tripfare int,type varchar(255),end_date date,remarks varchar(255),start_date date,vehicle varchar(255)) [42101-212]
+2022-08-01 23:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKINGDB" already exists; SQL statement:
+create table bookingdb(id int AUTO_INCREMENT,distance int,driver varchar(255),d_Share int,from_location varchar(255),fuel int,to_location varchar(255),tripfare int,type varchar(255),end_date date,remarks varchar(255),start_date date,vehicle varchar(255)) [42101-212]
+2022-08-01 23:39:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKINGDB" already exists; SQL statement:
+create table bookingdb(id int AUTO_INCREMENT,distance int,driver varchar(255),d_Share int,from_location varchar(255),fuel int,to_location varchar(255),tripfare int,type varchar(255),end_date date,remarks varchar(255),start_date date,vehicle varchar(255)) [42101-212]
+2022-08-01 23:41:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKING" not found; SQL statement:
+select booking0_.id as id1_0_0_, booking0_.d_share as d_share2_0_0_, booking0_.distance as distance3_0_0_, booking0_.driver as driver4_0_0_, booking0_.end_date as end_date5_0_0_, booking0_.from_location as from_loc6_0_0_, booking0_.fuel as fuel7_0_0_, booking0_.remarks as remarks8_0_0_, booking0_.start_date as start_da9_0_0_, booking0_.to_location as to_loca10_0_0_, booking0_.tripfare as tripfar11_0_0_, booking0_.type as type12_0_0_, booking0_.vehicle as vehicle13_0_0_ from booking booking0_ where booking0_.id=? [42102-212]
+2022-08-01 23:41:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKING" not found; SQL statement:
+select booking0_.id as id1_0_0_, booking0_.d_share as d_share2_0_0_, booking0_.distance as distance3_0_0_, booking0_.driver as driver4_0_0_, booking0_.end_date as end_date5_0_0_, booking0_.from_location as from_loc6_0_0_, booking0_.fuel as fuel7_0_0_, booking0_.remarks as remarks8_0_0_, booking0_.start_date as start_da9_0_0_, booking0_.to_location as to_loca10_0_0_, booking0_.tripfare as tripfar11_0_0_, booking0_.type as type12_0_0_, booking0_.vehicle as vehicle13_0_0_ from booking booking0_ where booking0_.id=? [42102-212]
+2022-08-01 23:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKING" not found; SQL statement:
+select booking0_.id as id1_0_, booking0_.d_share as d_share2_0_, booking0_.distance as distance3_0_, booking0_.driver as driver4_0_, booking0_.end_date as end_date5_0_, booking0_.from_location as from_loc6_0_, booking0_.fuel as fuel7_0_, booking0_.remarks as remarks8_0_, booking0_.start_date as start_da9_0_, booking0_.to_location as to_loca10_0_, booking0_.tripfare as tripfar11_0_, booking0_.type as type12_0_, booking0_.vehicle as vehicle13_0_ from booking booking0_ [42102-212]

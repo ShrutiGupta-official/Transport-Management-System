@@ -1,0 +1,68 @@
+<div class="col-md-6 offset-md-3">
+    <div *ngIf="updateMessage" class="alert alert-success alert-dismissible fade show">
+        <strong>Updated successfully !</strong> 
+        <button style="float: right;" type="button" (click)="back()" class="btn btn-success" >Back</button>
+    </div>
+    <h2>Update Bookings</h2>
+    <form (ngSubmit)="updateBookings()">
+       <!-- <div class="form-group">
+            <label> Id </label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="bookings.id" name="id">
+        </div> -->
+        <div style="margin:5px 5px" class="form-group">
+            <label> Vehicle Name </label>
+            <input type="text" id="vehicle" name="vehicle" class="form-control" required [(ngModel)]="bookings.vehicle">
+        </div>
+        <div style="margin:5px 5px" class="form-group">
+            <label> Driver Name </label>
+            <input type="text" id="driver" name="driver" class="form-control" required [(ngModel)]="bookings.driver">
+        </div>
+       
+        <div style="margin:5px 5px" class="form-group">
+            <label> From Location </label>
+            <input type="text" class="form-control" id="fromLocation" [(ngModel)]="bookings.fromLocation" name ="fromLocation">
+        </div>
+        <div style="margin:5px 5px" class="form-group">
+            <label> To Location </label>
+            <input type="text" class="form-control" id="toLocation" [(ngModel)]="bookings.toLocation" name ="toLocation">
+        </div>
+       <!-- <div style="margin:5px 5px" class="form-group">
+            <label> Distance</label>
+            <input type="text" class="form-control" id="distance" [(ngModel)]="bookings.distance" name ="distance">
+        </div>
+     <div style="margin:5px 5px" class="form-group">
+            <label> Type </label>
+            <input type="text" class="form-control" id="vehicle" [(ngModel)]="bookings.type" name ="type">
+        </div>
+        <div style="margin:5px 5px" class="form-group">
+            <label> Tripfare </label>
+            <input type="text" class="form-control" id="tripfare" [(ngModel)]="bookings.tripfare" name ="tripfare">
+        </div>
+        <div style="margin:5px 5px" class="form-group">
+            <label> Fuel </label>
+            <input type="text" class="form-control" id="fuel" [(ngModel)]="bookings.fuel" name ="fuel">
+        </div>
+        <div style="margin:5px 5px" class="form-group">
+            <label> DriverShare </label>
+            <input type="text" class="form-control" id="dShare" [(ngModel)]="bookings.driverShare" name ="dShare">
+        </div>
+        <div style="margin:5px 5px" class="form-group">
+            <label> Remarks </label>
+            <input type="text" class="form-control" id="remarks" [(ngModel)]="bookings.remarks" name ="remarks">
+        </div>-->
+        <div style="margin:5px 5px" class="form-group">
+            <label> StartDate </label>
+            <input type="text" class="form-control" id="startDate" value="{{this.datepipe.transform(bookings.startDate,'dd-MM-YYYY')}}" name ="startDate"> 
+        </div> 
+        
+        <div style="margin:5px 5px" class="form-group">
+            <label> EndDate </label>
+            <input type="text" class="form-control" id="endDate" value="{{this.datepipe.transform(bookings.endDate,'dd-MM-YYYY')}}" name ="endDate">
+        </div>
+        <!-- <div class="form-group">
+            <label> trip name </label>
+            <input type="text" class="form-control" id="name" [(ngModel)] = "booking.name" name ="name">
+        </div> -->
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>

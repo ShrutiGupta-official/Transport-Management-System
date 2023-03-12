@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../assets/images/v2.jpg" height="800" width="1500">
+
+        </div>
+        <div class="col-md-4 mt-3" >
+                <h3 style="font-family: 'Merriweather', serif; font-weight: 700; font-size: 3em;" class="text-white text-center" >Cab Management System</h3>
+                <!-- Form Fields -->
+                <form (ngSubmit)="onSubmit()" class="mt-4">
+                    <h5 class="text-white mb-3">Login </h5>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username" [(ngModel)]="credentials.userName" required>
+                        <label for="floatingInput">Username</label>
+                      </div>
+                    
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="credentials.password" required>
+                        <label for="floatingPassword">Password</label>
+                      </div>
+                      
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-success me-md-2" type="submit" >Login</button>
+                            
+                      </div>
+
+                      
+
+                    
+                     
+                </form>
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+</div>

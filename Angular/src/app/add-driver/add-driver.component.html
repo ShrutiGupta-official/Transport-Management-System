@@ -1,0 +1,36 @@
+<div class="col-md-6 offset-md-3">
+    <div *ngIf="addMessage" class="alert alert-success alert-dismissible fade show">
+        <strong>Added the field !</strong> 
+        <button style="float: right;" type="button" (click)="back()" class="btn btn-success" >Back</button>
+    </div>
+    <h2>Add Driver</h2>
+    <form #addplayerform="ngForm" (ngSubmit)="addDriver()">
+       <div class="form-group">
+            <label> License Number </label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="addtodriverlist.licensenumber" name="id" required>
+        </div>
+        <div class="form-group">
+            <label> Driver Name </label>
+            <input type="text" id="vehicle" name="name" class="form-control" required [(ngModel)]="addtodriverlist.name" >
+            </div>
+        <div class="form-group">
+            <label> Phone Number </label>
+            <input type="text" class="form-control" id="driver" [(ngModel)] = "addtodriverlist.age" name ="age">
+        </div>
+        <div class="form-group">
+            <label> Vehicle Type </label>
+            <input type="text" class="form-control" id="fromLocation" [(ngModel)] = "addtodriverlist.vehicletype" name ="vehicletype" required>
+        </div>
+        <!-- <div class="form-group">
+            <label> trip name </label>
+            <input type="text" class="form-control" id="name" [(ngModel)] = "booking.name" name ="name">
+        </div> -->
+
+        
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            <button class="btn btn-success" type="submit">Submit</button>
+            <a href="/home"><button style="float: right;" class="btn btn-success " type="submit">Home</button></a>
+        </div>
+
+    </form>
+</div>

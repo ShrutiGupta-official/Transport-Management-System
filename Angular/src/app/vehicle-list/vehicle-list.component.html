@@ -1,0 +1,49 @@
+<article>
+	<style>
+		td{
+			text-align: center;
+		}
+	</style>
+	<div class="container" >
+	
+		<div *ngIf="deleteMessage" class="alert alert-danger alert-dismissible fade show">
+			<strong>Deleted the field !</strong> 
+			<button type="button" (click) ="removeMessage()" class="btn-close" data-bs-dismiss="alert"></button>
+		</div>
+		<h1 class="article-heading text-center m-4">Vehicles List</h1>
+		<table class="table table-striped table-bordered bg-light rounded">
+            <thead>
+				<tr class="text-center bg-secondary text-white" style="font-size: 1.3em;">
+				
+					<th>Registration Number</th>
+					<th>Model Type</th>
+					<th>Vehicle Type</th>
+					<th>Number Of Seats</th>
+                    <!--<th>Ac Available</th>-->
+                    <th>Actions</th>
+				</tr>
+			</thead>
+            <tbody>
+				<div class="right" *ngIf=" "></div>
+				<tr *ngFor="let v of vehicles">
+					<td>{{v.registrationNo}}</td>
+					<td>{{v.modelType}}</td>
+					<td>{{v.vehicleType}}</td>
+					<td>{{v.numberOfSeat}}</td>
+                    <!--<td>{{v.acAvailable}}</td>-->
+                    <td>
+						<!--<button {click} = "updatevehicles{Vehicles,registrationNo}" class="btn btn-info">Update</button>-->
+						<!-- <a routerLink="/updatevehicle" class="text-primary" style="text-decoration: none;"><button class="btn btn-info">Update</button></a> -->
+            			<button class="btn btn-info" (click)="updateVehicle(v.registrationNo)">Update</button>
+						<button class="btn btn-info" (click)="deleteVehicle(v,v.registrationNo);">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+
+		</table>
+		<div style="margin-bottom: 10px;" class=" d-grid gap-2 d-md-flex justify-content-md-end">
+			<a routerLink="/home" class="text-primary" style="text-decoration: none;"><button class="btn btn-info">Home</button></a>
+		
+		</div>
+	</div>
+</article>
